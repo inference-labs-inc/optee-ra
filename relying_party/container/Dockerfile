@@ -18,7 +18,7 @@ ARG USERNAME=user
 ARG USER_UID=1000
 ARG USER_GID=${USER_UID}
 RUN groupadd -o --gid ${USER_GID} ${USERNAME} \
-    && useradd --uid ${USER_UID} --gid ${USER_GID} -m ${USERNAME}
+    && useradd -o --uid ${USER_UID} --gid ${USER_GID} -m ${USERNAME}
 
 # Create app directory
 ENV APP_DIR /app
