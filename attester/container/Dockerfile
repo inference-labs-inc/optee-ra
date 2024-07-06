@@ -84,7 +84,7 @@ RUN cd ${OPTEE_DIR} \
 # Install rust to build rust-apiclient
 USER ${USERNAME}:${USERNAME}
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-ENV PATH="${PATH}:/home/${USERNAME}/.cargo/bin"
+ENV PATH="${PATH}:~/.cargo/bin"
 USER root:root
 
 # Install dependencies for cross-compilation
