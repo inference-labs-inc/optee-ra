@@ -21,7 +21,7 @@ RUN groupadd -o --gid ${USER_GID} ${USERNAME} \
     && useradd -o --uid ${USER_UID} --gid ${USER_GID} -m ${USERNAME}
 
 # Create app directory
-ENV APP_DIR /app
+ENV APP_DIR="/app"
 RUN mkdir ${APP_DIR} \
     && chown ${USERNAME}:${USERNAME} ${APP_DIR}
 
